@@ -1,0 +1,507 @@
+@import "./global-style.scss";
+
+@media only screen and (max-width: 1200px){
+  .main-nav{
+    .container-nav {
+      justify-content: space-between !important;
+      align-content: center;
+      // flex-direction: row;
+    }
+  }
+  .monkey-banner {
+    width: 100%;
+    height: auto;
+  }
+  .main-header {
+    @include main-text($azul-roxellana, 3rem);
+    padding-top: 2rem;
+  }
+  .supplier-banner {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .supplier-container {
+    padding-left: 2rem !important;
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+  }
+  .title-h2 {
+    @include main-text($gray-600, 1.5rem);
+    padding-right: 0;
+  }
+  .icons-container {
+    width: 102%;
+    position: relative;
+    right: 0;
+    margin-top: 2rem !important;
+  }
+  .container-brand {
+    padding-top: 2rem;
+  }
+  .container-text-info{
+    padding: 0 4rem 2rem 4rem;
+  }
+  .products-container{
+    padding: 0 1.5rem 3rem 1.5rem !important ;
+  .product-card-container {
+    padding-left: 1rem !important;
+    .product-text {
+      // padding: 1.5rem 1rem;
+      height: 23rem;
+    }
+  }
+}
+.container-title {
+  padding-top: 2rem;
+}
+}
+
+@media only screen and (max-width: 769px){
+  //Supplier
+  .order-one {
+    order: 1;
+  }
+  .order-two {
+    order: 2;
+  }
+    .supplier-banner {
+      height: 600px;
+      // margin-left: -2rem;
+      margin-top: 2rem;
+    }
+    // .supplier-container {
+    //   padding: 0 !important;
+    //   h2 {
+    //     font-size: 1.5rem;
+    //     margin-top: 2rem;
+    //   }
+    // }
+    .products-container{
+    .product-card-container {
+      padding: 0 !important;
+      margin-bottom: 1.5rem;
+      .product-text {
+        padding: 1.5rem 1rem;
+        height: auto;
+      }
+    }
+  }
+
+    .btn-supplier{
+margin-top: 2rem;
+    }
+    // .icons-container {
+    //   width: 102%;
+    //   position: relative;
+    //   right: 0;
+    //   margin-top: 2rem !important;
+    // }
+    // .container-text-info{
+    //   padding: 0 4rem 2rem 4rem;
+    // }
+      //Branding blocks
+  // .container-brand {
+  //   padding-top: 2rem;
+  // }
+  .container-text {
+    padding-bottom: 2rem;
+  }
+  .brand-text {
+    font-size: 1.5rem;
+  }
+  .brand-size {
+    margin-bottom: 1.5rem;
+    padding: 0 !important;
+  }
+  .container-logo-one {
+    padding-bottom: .5rem;
+  }
+
+  .container-logo-two {
+    padding-bottom: 0;
+  }
+  .container-logo-three {
+    padding-bottom: 0;
+  }
+
+  #ifood {
+    display: none;
+  }
+  #philco {
+    display: none;
+  }
+  #kws {
+    display: none;
+  }
+  #itau {
+    display: none;
+  }
+  #safra {
+    display: none;
+  }
+  #bnp{
+    display: none;
+  }
+  .company-banner{
+    height: 600px;
+  }
+  .investor-banner {
+    height: 650px;
+  }
+  .contact-header {
+    @include main-text($gray-600, 2.5rem);
+  }
+  // .container-titles {
+  //   padding: 0 1.5rem;
+  // }
+  .container-icons {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+  .container-list {
+    margin: 5rem 0 !important;
+}
+}
+
+@media only screen and (max-width: 426px) {
+  .canva-geral {
+    padding: 1.5rem 1.5rem 0px;
+  }
+  .first-block {
+    padding: 0 1.5rem;
+  }
+  .general-padding {
+    padding: 0 1.5rem;
+  }
+  .link-style {
+    font-size: 14px;
+  }
+  // .title-h2 {
+  //   @include main-text($gray-600, 1.5rem);
+  //   padding-right: 0;
+  // }
+  .flex-general {
+    @include flexCenter();
+  }
+
+  //Main banner
+  .monkey-banner {
+    height: 300px;
+    // margin-left: -3.1rem;
+    padding-bottom: 0;
+  }
+  .main-header {
+    @include main-text($azul-roxellana, 2rem);
+    padding-top: 2rem;
+  }
+  .main-text {
+    @include main-text($gray-600, 1rem);
+    padding-right: 0;
+  }
+  .btn-border-header {
+    @include btn-medium-border(32px);
+    font-size: 14px;
+  }
+
+  //Supplier
+  .supplier-banner {
+    height: 300px;
+    // margin-left: -2rem;
+    margin-top: 2rem;
+  }
+  .investor-banner {
+    height: 300px;
+  }
+  // .order-one {
+  //   order: 1;
+  // }
+  // .order-two {
+  //   order: 2;
+  // }
+  .supplier-container {
+    padding-left: 0 !important;
+  }
+  // .icons-container {
+  //   width: 112%;
+  //   position: relative;
+  //   right: 0;
+  //   margin-top: 2rem !important;
+  // }
+
+  .text-icons {
+    display: flex;
+    margin: 0;
+    padding: 0 !important;
+    align-items: flex-start;
+    // width: 100%;
+  }
+  .title-icons {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+  .supplier-text-icons {
+    @include main-text($gray-500, 14px);
+    padding-left: 1rem;
+  }
+
+  // //Branding blocks
+  // .container-brand {
+  //   padding-top: 2rem;
+  // }
+  // .container-text {
+  //   padding-bottom: 2rem;
+  // }
+  // .brand-text {
+  //   font-size: 1.5rem;
+  // }
+  .brand-size {
+    // margin-bottom: 1.5rem;
+    // padding: 0 !important;
+    width: 150px !important;
+    height: auto !important;
+  }
+  .container-logo-one {
+    @include flexDirection(column);
+  }
+
+  // .container-logo-two {
+  //   padding-bottom: 0;
+  // }
+  .container-logo-three {
+    @include flexDirection(column);
+  }
+
+  // #ifood {
+  //   display: none;
+  // }
+  // #philco {
+  //   display: none;
+  // }
+  // #kws {
+  //   display: none;
+  // }
+  // #itau {
+  //   display: none;
+  // }
+  // #safra {
+  //   display: none;
+  // }
+
+  //Company
+  .company-banner {
+    height: 300px;
+  }
+  .main-company {
+    h2 {
+      font-size: 1.5rem;
+      padding-right: 0;
+    }
+  }
+
+  .btn-company {
+    @include btn-medium-full(32px);
+    width: 151px;
+    font-size: 14px;
+    margin-top: 2rem;
+  }
+  .row-company {
+    padding: 0 1.5rem;
+  }
+  .icons-container-left {
+    padding: 2rem 0;
+    @include flexDirection(column);
+  }
+
+  .products-container {
+    background: $azul-roxellana;
+    // padding: 0 1.5rem 3rem 1.5rem !important ;
+    .title-product {
+      padding-left: 0 !important;
+      h4 {
+        text-align: center;
+      }
+    }
+    .product-card-container {
+      // padding: 0 !important;
+      // margin-bottom: 1.5rem;
+      .product-card-title {
+        @include flexSpace(flex-start);
+        align-items: center;
+        h5 {
+          font-size: 1rem;
+          padding-left: 1rem;
+          padding-bottom: 1rem;
+        }
+      }
+
+      .product-card {
+        background: $gray-100;
+        border: 1px solid $gray-300;
+        box-sizing: border-box;
+        border-radius: 8px;
+        filter: drop-shadow(-8px 12px 28px rgba(21, 52, 70, 0.49));
+      }
+      // .product-text {
+      //   padding: 1.5rem 1rem;
+      //   height: auto;
+      // }
+    }
+  }
+
+  //Investor styles
+  .investor-company {
+    h2 {
+      padding-right: 0;
+    }
+  }
+  .btn-investor {
+    @include btn-medium-full(32px);
+    width: 151px;
+    margin-top: 2rem;
+    background: $verde-folha;
+  }
+  //News
+  // .container-title {
+  //   padding-top: 2rem;
+  // }
+  .carousel-container {
+    padding: 1.5rem;
+    // .carousel-list {
+    //   @include flexSpace(flex-start);
+    // }
+  }
+  .data-text {
+    @include main-text($gray-400, 12px);
+    margin-top: 15rem;
+    width: auto;
+  }
+  .title-new {
+    @include main-text($branco-uacari, 1rem);
+    width: 250px;
+  }
+  @mixin news-container($image) {
+    @include flexDirection(column);
+    background-image: $image;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0.5rem;
+    width: auto;
+    // margin: 0 0.5rem;
+    margin-left: 0.5rem;
+    min-width: 255px !important;
+  }
+  .carousel-prev {
+    left: 3px;
+  }
+  .carousel-next {
+    right: 3px;
+  }
+  .news-container1 {
+    @include news-container(url(../../../images/news-1.png));
+  }
+  
+  .news-container2 {
+    @include news-container(url(../../../images/Aperam-news.png));
+  }
+  
+  .news-container3 {
+    @include news-container(url(../../../images/investimento-news.png));
+  }
+  
+  .news-container4 {
+    @include news-container(url(../../../images/Felipe-adorno-news.png));
+  }
+  .news-container5 {
+    @include news-container(url(../../../images/gustavo-news.png));
+  }
+  .news-container6 {
+    @include news-container(url(../../../images/Spike-news.png));
+  }
+  .button-container {
+    // @include flexCenter();
+    padding: 0 1.5rem 2rem 1.5rem;
+  }
+  .button-news {
+    @include btn-medium-border(32px);
+    width: 100% !important;
+  }
+
+  //Contact
+  .contact-container {
+    padding: 0 1.5rem;
+    margin-bottom: -13.5rem;
+  }
+  .contact-text-container {
+    border-radius: 16px 16px 0px 0px;
+    padding: 1rem !important;
+  }
+  .contact-form-container {
+    border-radius: 0px 0px 16px 16px !important;
+    padding: 1rem !important;
+  }
+  .contact-header {
+    @include main-text($gray-600, 1.5rem);
+    text-align: center;
+  }
+  .contact-text {
+    @include main-text($gray-600, 1rem);
+    text-align: center;
+  }
+  .label-text {
+    @include main-text($gray-600, 14px);
+    padding: 0.5rem 0;
+  }
+  .label-name {
+    padding-top: 0;
+  }
+  .submit-button {
+    @include btn-medium-full(32px);
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+
+  //Footer styles
+
+  .row-logo {
+    @include flexCenter();
+    padding: 3rem 0 2rem 0;
+  }
+  .container-titles {
+    padding: 0 1.5rem;
+  }
+  .titles-footer {
+    h6 {
+      padding-bottom: 0.5rem;
+    }
+  }
+  // .container-icons {
+  //   padding-right: 0;
+  //   margin-bottom: 1rem;
+  // }
+  .row-copyright {
+    // @include flexCenter();
+    padding: 1.5rem 0;
+    // text-align: center;
+  }
+  .radio-input {
+    margin-right: 0.5rem;
+    @include flexCenter();
+    input {
+      margin-right: 0.5rem;
+    }
+  }
+  .lenguage-row {
+    @include flexSpace(center);
+    flex-direction: row;
+    background: $preto-prego;
+    padding: 1.5rem;
+  }
+  .container-text-info{
+    padding: 0;
+  }
+.container-text {
+  padding: 0 0 1rem 0;
+}
+}

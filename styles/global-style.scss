@@ -1,0 +1,661 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+//colors
+$color-neutral-darkest: #000000;
+$color-neutral-dark: #747880;
+$color-neutral-medium: #d6d7da;
+$color-neutral-light: #eff0f1;
+$color-neutral-lightest: #ffffff;
+
+$azul-roxellana: #0273e8;
+$branco-uacari: #ffffff;
+$preto-prego: #1e232c;
+$off-black: #364254;
+
+$amarelo-guariba: #e3b839;
+$rosa-mandril: #ce596d;
+$gorilla-roxo: #744da6;
+$verde-folha: #009966;
+
+$banco-bnp: #009966;
+$banco-bradesco: #cc092f;
+$banco-voiter: #36264d;
+$banco-itau: #ec7000;
+$banco-sofisa: #17b497;
+$banco-inter: #ff8700;
+$icons-blue: #153446;
+$primary-100: #FCEEED;
+
+$gray-600: #4b4a53;
+$gray-500: #72717e;
+$gray-400: #9c9ca6;
+$gray-300: #d6d6d6;
+$gray-100: #f5f5f5;
+$gray-50: #FAFAFA;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+@mixin flexSpace($space) {
+  display: flex;
+  justify-content: $space;
+  align-content: center;
+}
+
+@mixin flexDirection($direction) {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: $direction;
+}
+
+@mixin btn-medium-full($height) {
+  width: 40px;
+  height: $height;
+  background: $azul-roxellana;
+  border-radius: 8px;
+  border: none;
+  color: $branco-uacari;
+}
+
+@mixin btn-medium-white($width) {
+  width: $width !important;
+  height: 48px ;
+  color: $azul-roxellana;
+  border-radius: 8px;
+  border: none;
+  background: $branco-uacari;
+}
+
+@mixin btn-sub-header($width) {
+  width:$width !important;
+  height: 40px;
+  background: $azul-roxellana;
+  border-radius: 40px;
+  border: none;
+  color: $branco-uacari;
+  box-shadow: -8px 12px 11px rgba(2, 115, 232, 0.1);
+  font-size: 1rem;
+line-height: 24px;
+}
+
+@mixin btn-header($width, $color) {
+  width:$width !important;
+  height: 40px;
+  background: transparent;
+  border-radius: 40px;
+  border: 1px solid $color;
+  color: $off-black;
+  font-size: 1rem;
+line-height: 24px;
+}
+
+@mixin btn-medium-border($height) {
+  width: 219px;
+  height: $height;
+  border: 1px solid $azul-roxellana;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: $azul-roxellana;
+  background: transparent;
+  font-weight: 650;
+}
+
+@mixin main-text($color, $size) {
+  color: $color;
+  font-size: $size;
+}
+
+@mixin text-container {
+  background: $color-neutral-light;
+  border-radius: 16px 0px 0px 16px;
+  padding: 0 3rem !important;
+}
+@mixin container-background($color){
+  margin-top: 3rem !important;
+  background: $color;
+  border-radius: 32px;
+  padding: 4rem 13rem;
+}
+
+// General Styles
+.canva-geral {
+  padding: 3.5rem 3.5rem 0px;
+}
+.first-block {
+  background: $gray-100;
+  border-radius: 2rem;
+  padding: 0 3rem;
+}
+.general-padding{
+  padding: 0 3rem;
+}
+
+.link-style {
+  text-decoration: underline !important;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.link-style-pro {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+// .border-test {
+//   border: 1px solid transparent !important;
+// }
+
+.title-h2 {
+  @include main-text($gray-600, 2rem);
+  font-weight: bold;
+  padding-right: 2rem;
+}
+
+// Nav Bar Styles
+.main-nav {
+  // height: 7rem;
+  border-bottom: 0.5px solid $gray-300;
+  width: 100%;
+  .monkey-logo {
+    height: 1.5rem;
+  }
+  .container-nav {
+    //@include flexSpace(flex-end);
+    display: flex;
+    justify-content: flex-end !important;
+    align-content: center;
+    width: 100%;
+    li {
+      list-style-type: none;
+      width: 130px;
+      a {
+        color: $gray-600 !important;
+      }
+      #navbarLink2{
+        color: $branco-uacari !important;
+      }
+    }
+  }
+  .btn-full-nav {
+    @include btn-medium-full(40px);
+  }
+  .btn-border-nav {
+    @include btn-medium-border(40px);
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+//MainBanner styles
+.text-container {
+  @include flexDirection(column);
+  // padding-top: 5.5rem;
+}
+.main-header {
+  @include main-text($azul-roxellana, 4rem);
+  font-weight: bold;
+}
+.main-text {
+  @include main-text($gray-600, 1.25rem);
+  padding-right: 3rem;
+}
+.btn-border-header {
+  @include btn-medium-border(48px);
+  a{
+    text-decoration: none;
+  }
+}
+.monkey-banner {
+  padding-bottom: 2.9rem;
+  width: auto;
+  height: fit-content;
+}
+
+//Supplier styles
+.btn-supplier{
+  @include btn-medium-full(40px);
+  width: 181px;
+  box-shadow: -8px 12px 11px rgba(227, 184, 57, 0.15);
+  background: $amarelo-guariba;
+  color: $preto-prego !important;
+}
+.supplier-container {
+  @include flexDirection(column);
+  padding-left: 6.4rem !important;
+}
+.supplier-banner {
+  margin-top: -6.3rem;
+  width: auto;
+  height: fit-content;
+  // width: inherit;
+}
+.icons-container {
+  width: 52%;
+  position: absolute;
+  right: 6rem;
+  margin-top: -5% !important;
+}
+.supplier-text-icons {
+  @include main-text($gray-500, 1.25rem);
+}
+
+//Branding blocks
+.container-brand {
+  padding-top: 13rem;
+}
+.container-text {
+  @include flexCenter();
+  padding: 0 4rem 4rem 4rem;
+  text-align: center;
+}
+.container-text-info{
+  padding: 0 19rem;
+    text-align: center;
+}
+.brand-text {
+  @include main-text($off-black, 2rem);
+  font-weight: 400;
+  text-align: center;
+  padding: 0 20rem 3rem 20rem;
+
+}
+.container-logo-one {
+  @include flexSpace(space-around);
+  padding-bottom: 4rem;
+}
+.container-logo-two {
+  @include flexSpace(space-around);
+  padding-bottom: 3rem;
+  align-items: center;
+}
+.container-logo-three {
+  @include flexSpace(space-evenly);
+  padding-bottom: 10rem;
+  align-items: center;
+}
+.brand-size {
+  width: auto !important;
+  height: 2.5rem;
+}
+.btn-branding{
+  @include btn-medium-full(48px);
+  width: 248px !important;
+  a{
+    color: $branco-uacari !important;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+}
+
+#mdias{
+  height:56px;
+}
+#kws{
+  height:64px;
+}
+#gerdau{
+  height:48px
+}
+#itau{
+  height:56px;
+}
+
+
+//Company Style
+.main-company {
+  background: $color-neutral-light;
+  h2 {
+    padding-right: 7rem;
+  }
+}
+.company-text-container {
+  @include flexDirection(column);
+  padding-right: 6rem;
+}
+.row-company {
+  padding: 0 3.5rem;
+  margin-right: 0;
+  margin-left: 0;
+}
+.btn-company {
+  @include btn-medium-full(40px);
+  width: 151px;
+  box-shadow: -8px 12px 11px rgba(2, 115, 232, 0.1);
+  margin-top: 5.5rem;
+}
+.icons-container-left {
+  padding: 4rem 0;
+}
+
+//Products style
+.first-block {
+  background: $color-neutral-light;
+  height: 40%;
+}
+.second-block {
+  background: $color-neutral-lightest;
+  height: 60%;
+}
+.products-container {
+  background: $azul-roxellana;
+  padding: 0  5.5rem 3rem 6rem  !important ;
+  // padding-left: 5.5rem !important;
+  // padding-right: 6rem !important;
+  // padding-bottom: 3rem !important;
+  border-radius: 16px 0px 0px 16px;
+  .title-product {
+    padding-left: 3.5rem;
+    h4 {
+      color: $branco-uacari;
+      font-weight: 400 !important;
+    }
+  }
+  .product-card-container {
+    padding-left: 2.5rem;
+    .product-card {
+      background: $gray-100;
+      border: 1px solid $gray-300;
+      box-sizing: border-box;
+      border-radius: 8px;
+      filter: drop-shadow(-8px 12px 28px rgba(21, 52, 70, 0.49));
+    }
+    .product-text {
+      padding: 2rem 1.5rem;
+      height: 20.5rem;
+    }
+  }
+}
+
+//Investor styles
+.investor-company {
+  background: transparent;
+  h2 {
+    padding-right: 7rem;
+  }
+}
+.btn-investor {
+  @include btn-medium-full(40px);
+  width: 151px;
+  box-shadow: -8px 12px 11px rgba(2, 115, 232, 0.1);
+  background: $verde-folha;
+}
+
+//News styles
+
+@mixin news-container($image) {
+  @include flexDirection(column);
+  // width: 320px !important;
+  // height: 424px;
+  background-image: $image;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 1.5rem;
+  // margin: 0 0.5rem;
+  margin-left: 1.5rem;
+}
+.container-title {
+  @include flexCenter();
+  padding-top: 6rem;
+}
+.carousel-container {
+  position: relative;
+  padding: .5rem 3.5rem 3rem 3.5rem;
+//   .carousel-list{
+//   @include flexSpace(space-around);
+// }
+}
+.button-icons{
+  background-color: transparent;
+  width: 48px !important;
+  height: auto;
+  z-index: 1;
+  position: absolute;
+  top: calc(50% - 35px);
+  border: none;
+}
+.carousel-prev{
+  left: 30px;
+}
+.carousel-next{
+  right: 26px;
+}
+.news-container1 {
+  @include news-container(url(/images/news-1.png));
+}
+
+.news-container2 {
+  @include news-container(url(/images/Aperam-news.png));
+}
+
+.news-container3 {
+  @include news-container(url(/images/investimento-news.png));
+}
+
+.news-container4 {
+  @include news-container(url(/images/Felipe-adorno-news.png));
+}
+.news-container5 {
+  @include news-container(url(/images/gustavo-news.png));
+}
+.news-container6 {
+  @include news-container(url(/images/Spike-news.png));
+}
+
+.data-text {
+  @include main-text($gray-400, 14px);
+  margin-top: 14rem;
+  width: 272px;
+}
+
+.title-new {
+  @include main-text($branco-uacari, 1.25rem);
+  font-weight: 600;
+  width: 272px;
+  a{
+    text-decoration: none;
+  }
+}
+.title-new-a {
+    text-decoration: none;
+}
+
+.button-container{
+  @include flexCenter();
+  padding-bottom: 3rem;
+}
+
+.button-news{
+ @include btn-medium-border(48px);
+ width: 326px !important;
+ font-size: 14px;
+ font-weight: 500;
+}
+
+//Contact styles
+.contact-container {
+  padding: 0 3.5rem;
+  margin-bottom: -13.5rem;
+}
+.contact-background {
+  background: $off-black;
+  height: 13.5rem;
+}
+
+.contact-text-container {
+  @include text-container ();
+  @include flexDirection(column);
+}
+.contact-form-container {
+  @include text-container ();
+  border-radius: 0px 16px 16px 0px !important;
+}
+.contact-header {
+  @include main-text($gray-600, 3rem);
+  font-weight: 700 !important;
+}
+.contact-text {
+  @include main-text($gray-600, 1.25rem);
+}
+.label-text {
+  @include main-text($gray-600, 18px);
+  font-weight: 500;
+  padding: 1rem 0;
+
+  input {
+    background: $gray-100 !important;
+    border: 1px solid $gray-300;
+  }
+  textarea {
+    background: $gray-100 !important;
+    border: 1px solid $gray-300;
+  }
+  p{
+    font-size: 14px;
+    color: red;
+    margin: 0;
+  }
+}
+.label-name{
+  padding-top: 3rem;
+  display: flex
+}
+.radio-text {
+  @include main-text($gray-600, 14px);
+}
+.submit-button {
+  @include btn-medium-full(48px);
+  width: 100%;
+  margin: 1.5rem 0 3rem 0;
+}
+
+//Footer styles
+.footer-container {
+  background: $off-black;
+}
+.logo-monkey {
+  width: 131px !important;
+}
+.row-logo {
+  @include flexCenter();
+  padding: 5rem 0 2.5rem 0;
+}
+.row-copyright {
+  @include flexCenter();
+  padding: 2.5rem 0;
+  text-align: center;
+}
+.container-titles {
+  padding: 0 8.8rem;
+}
+.titles-footer {
+  line-height: 24px;
+  h6 {
+    @include main-text($branco-uacari, 18px);
+    font-weight: 400;
+    padding-bottom: 1.5rem;
+  }
+  .text-footer{
+    text-decoration: none;
+  }
+    p {
+      color: $color-neutral-dark;
+    }
+
+}
+.container-icons {
+  padding-right: 5rem;
+}
+.copyright-footer {
+  @include main-text($branco-uacari, 14px);
+  a {
+    text-decoration: underline;
+    color: $branco-uacari;
+  }
+}
+.radio-input {
+  color: $branco-uacari;
+  margin-right: 1rem;
+  a{
+    text-decoration: none;
+    color: $branco-uacari;
+  }
+
+}
+.lenguage-row {
+  @include flexSpace(flex-end);
+  flex-direction: row;
+  background: $preto-prego;
+  padding: 1.5rem 3.5rem;
+}
+.center-text{
+  text-align: center;
+}
+.text-blue{
+  color: $azul-roxellana;
+  font-weight: normal !important;
+}
+.flex-general{
+  @include flexCenter();
+  align-items: center;
+}
+
+// .container-card-geral {
+//   margin: 0 .5rem !important;
+// }
+.container-list{
+  margin: 8rem 0 !important;
+  border-top: 1px solid $gray-400;
+  @include flexSpace(center);
+}
+.first-block-program{
+  padding-bottom: 5.5rem !important;
+}
+.row-program{
+  margin-top: -2.5rem !important;
+}
+.container-card {
+  padding: .5rem !important;
+}
+.card-program{
+  @include flexDirection(column);
+  background: $gray-50;
+  border: 1px solid $gray-300;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 2.5rem 1rem 1rem !important;
+  min-height: 304px;
+}
+.link-program{
+  width: 100%;
+  background: #FCEEED;
+  border-radius: 8px;
+  border: none;
+  padding: 1rem;
+}
+.title-email{
+  padding: 5.5rem 13rem 2.5rem !important;
+}
+.input-email{
+
+    background: $gray-100 !important;
+    border: 1px solid $gray-300;
+    height: 48px;
+}

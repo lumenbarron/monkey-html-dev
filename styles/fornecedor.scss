@@ -1,0 +1,332 @@
+@import "./global-style.scss";
+
+//Main Banner
+.container-text-fornecedor{
+    padding: 0 13rem !important;
+}
+
+.btn-fornecedor-header{
+    @include btn-header(185px, $amarelo-guariba);
+    margin-top: 3rem;
+}
+
+.fornecedor-banner{
+    margin-bottom: -18rem;
+}
+
+.main-text-forn {
+    @include main-text($gray-600, 1.25rem);
+    padding-right: 3rem;
+    line-height: 32px;
+  }
+
+//Soluções
+.container-solucoes{
+    margin-top: 18rem;
+}
+
+.container-text-solucoes{
+    padding: 0 18rem !important;
+    margin-bottom: 3rem;
+}
+.flow-monkey{
+    width: 100%;
+}
+
+.text-blue{
+    color: $azul-roxellana;
+    font-weight: normal !important;
+}
+.row-icons{
+    padding: 0 18rem 4.5rem !important;
+
+}
+
+.col-icons{
+   @include flexSpace(flex-start);
+   align-items: center;
+}
+
+.col-icons-two{
+    @include flexSpace(flex-end);
+    //padding-left: 5rem !important;
+ }
+
+.col-icons-three{
+    padding-right: 3rem !important;
+}
+
+.text-info-icons{
+    @include main-text($off-black, 2rem);
+}
+
+//Fazemos
+.container-fazemos{
+    padding-top: 4rem !important;
+}
+
+.col-fazemos{
+    padding-left: 3rem !important;
+}
+.banner-two{
+    width: 100%;
+}
+.bannner-two-lines{
+    background: url(../images/como-fazemos-two-lines.png);
+    background-repeat: no-repeat;
+    width: auto;
+    height: 142px;
+    margin-top: -12rem;
+    margin-left: 24rem;
+}
+
+//Compara
+.container-compara{
+    margin-top: 7rem !important;
+    background: $preto-prego;
+    border-radius: 32px;
+    padding: 5rem 0 !important; 
+}
+.header-compara{
+        @include main-text($branco-uacari, 3rem);
+        font-weight: 700 !important;
+        // margin-top: 5rem !important;     
+}
+
+.text-compara{
+    @include main-text($gray-300, 1.25rem);
+}
+.p-compara{
+padding-bottom: 3rem !important;
+}
+.icons-compara{
+    padding: 0 11rem !important;
+}
+.flex-container{
+    display: flex;
+}
+.monkey-container{
+    padding: 3rem !important;
+    border-left: 3px solid $gray-600;
+}
+.mercado-container{
+    padding: 3rem 0 !important;
+}
+
+//Historias
+.historias-container{
+    margin-top: 6.5rem !important;
+}
+.container-user{
+    background: $gray-100;
+border: 1px solid $azul-roxellana !important;
+border-radius: 16px;
+padding: 2rem !important;
+height: 100%;
+}
+
+.text-user{
+    @include main-text($gray-600, 1rem);
+}
+
+//Midia
+.midia-container{
+    margin-top: 7.5rem !important;
+    background: $azul-roxellana;
+    border-radius: 32px;
+    padding: 6rem 13rem;
+}
+
+.icons-midia{
+    margin-top: 3rem !important;
+    padding: 0 20rem !important;
+}
+
+// .container-list{
+//     margin: 8rem 0 !important;
+//     border-top: 1px solid $gray-600;
+//     @include flexSpace(center);
+// }
+
+.header-list{
+    padding: 5.5rem 13rem 2.5rem !important;
+}
+
+.btn-list{
+    @include btn-medium-full(48px);
+    width: 360px !important;
+}
+
+@media only screen and (max-width: 1200px){
+    .container-text-solucoes {
+        padding: 0 !important;
+    }
+    .container-text-fornecedor{
+        padding: 0 !important;
+    }
+    .row-icons {
+        padding: 0 !important;
+        margin-bottom: 2rem;
+    }
+    .col-fazemos{
+        padding-left: 0 !important;
+    }
+    .bannner-two-lines{
+display: none;
+    }
+    .icons-compara {
+        padding: 0 4rem !important;
+    }
+    .midia-container {
+        margin-top: 3rem !important;
+        padding: 3rem;
+    }
+    .icons-midia {
+        padding: 0 !important;
+    }
+    .col-icons{
+        // margin-bottom: 2rem !important;
+        @include flexSpace(center);
+     }
+}
+
+@media only screen and (max-width: 769px){
+    // .container-text-fornecedor{
+    //     padding: 0 !important;
+    // }
+    .btn-fornecedor-header{
+        margin-top: 2rem;
+    }
+    .fornecedor-banner {
+        margin-bottom: -12rem;
+    }
+    .container-solucoes {
+        margin-top: 12rem;
+    }
+    // .container-text-solucoes {
+    //     padding: 0 !important;
+    // } 
+    .row-icons {
+        margin-bottom: 0;
+        @include flexDirection(column)
+    }  
+    .text-info-icons{
+        @include main-text($off-black, 1.5rem);
+    } 
+    .col-icons{
+        margin-bottom: 2rem !important;
+        // @include flexSpace(center);
+     }
+     .col-icons-two{
+         @include flexSpace(flex-start);
+         margin-bottom: 2rem !important;
+         //padding-left: 5rem !important;
+      }
+      .container-fazemos {
+        padding-top: 1rem !important;
+    }
+    .main-text-forn {
+        padding-right: 0rem;
+      }
+    //   .col-fazemos{
+    //     padding-left: 0 !important;
+    // }
+
+    .margin-fazemos{
+        margin-top: 8rem;
+    }
+
+    .banner-two {
+        margin-top: 0 !important;
+        width: 100%;
+    }
+    .bannner-two-lines{
+        display: block;
+        background: url(../images/como-fazemos-two-line.png);
+        background-repeat: no-repeat;
+        margin-top: -1rem;
+        margin-left: 6rem;
+        width: 10%;
+        height: 50%;
+        background-size:contain
+    }
+    .container-compara {
+        margin-top: 2rem !important;
+        padding: 2rem !important;
+    }
+    .p-compara {
+        padding-bottom: 0 !important;
+    }
+    // .icons-compara {
+    //     padding: 0 2rem !important;
+    // }
+    .monkey-container{
+        text-align: center;
+        border-top: 3px solid $gray-600;
+        border-left: 0px solid ;
+    }
+    .mercado-container{
+        text-align: center;
+    }
+    .flex-container{
+        justify-content: center;
+    }
+    .historias-container {
+        margin-top: 4rem !important;
+    }
+    .contact-header{
+        text-align: center;
+    }
+    .container-text-solucoes{
+
+        // padding: 0 18rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .container-user{
+        margin-bottom: 2rem;
+        height: auto;
+    }
+    // .midia-container {
+    //     margin-top: 3rem !important;
+    //     padding: 3rem;
+    // }
+    // .icons-midia {
+    //     padding: 0 !important;
+    // }
+    // .container-list {
+    //     margin: 5rem 0 !important;
+    // }
+    .header-list {
+        padding: 3.5rem 0 !important;
+    }
+    }
+
+    @media only screen and (max-width: 426px){
+        .text-info-icons {
+            @include main-text($off-black, 1.25rem);
+        }
+        .header-compara{
+            @include main-text($branco-uacari, 2rem);   
+    }
+    .icons-compara {
+        padding: 0 !important;
+    }
+    .mercado-container {
+        padding: 2rem 0 !important;
+    }
+    .monkey-container {
+        padding: 2rem 0 !important;
+    }
+    .main-text-forn {
+        @include main-text($gray-600, 1rem);
+      }
+      .text-compara{
+        @include main-text($gray-300, 1rem);
+    }
+      .midia-container {
+        padding: 3rem 1rem;
+    }
+    .flex-container{
+        justify-content: flex-start;
+    }
+    }

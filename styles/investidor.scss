@@ -1,0 +1,96 @@
+@import "./global-style.scss";
+
+.btn-investidor-header{
+    @include btn-header(185px, $verde-folha);
+    margin-top: 3rem;
+    color: $verde-folha;
+}
+
+.text-verde{
+    color: $verde-folha;
+    font-weight: normal !important;
+}
+
+.investidor-banner {
+    margin-bottom: -16rem;
+}
+
+.col-icons-inv{
+    @include flexSpace(flex-start);
+    padding-left: 5rem !important;
+}
+
+.container-fazemos-inv{
+    padding-top: 10rem !important;
+}
+
+.midia-container-investidor {
+    @include container-background($verde-folha);
+    @include flexCenter();
+}
+
+.btn-fazemos-inv{
+    @include btn-medium-white(360px);
+    margin-top: 3rem !important;
+    color: $verde-folha;
+    a{
+        color: $verde-folha;
+        text-decoration: none;
+    }
+}
+
+.ventagens-investor{
+    @include container-background($gray-100);
+    margin-top: 6.5rem !important;
+    padding: 11.25rem 13rem;
+}
+
+.container-brand-inv{
+    padding-top: 15rem;
+    padding-bottom: 8.5rem;
+}
+
+.historias-investidor {
+    padding: 0 25rem !important;
+}
+
+@media only screen and (max-width: 1200px){
+    .midia-container-investidor {
+        margin-top: 3rem !important;
+        padding: 3rem;
+    }
+    .historias-investidor {
+        padding: 0 !important;
+    }
+}
+
+
+@media only screen and (max-width: 769px){
+    // .container-text-fornecedor{
+    //     padding: 0 !important;
+    // }
+    .btn-investidor-header{
+        margin-top: 2rem;
+    }
+    .investidor-banner {
+        margin-bottom: -10rem;
+    }
+    // .midia-container-investidor {
+    //     margin-top: 3rem !important;
+    //     padding: 3rem;
+    // }
+    .ventagens-investor{
+        padding: 3rem 1rem;
+    }
+    .col-icons-inv{
+        padding-left: 0 !important;
+        margin-bottom: 2rem !important;
+        @include flexSpace(flex-start);
+    }
+    .container-fazemos-inv{
+        padding-top: 5rem !important;
+    }
+    // .historias-investidor {
+    //     padding: 0 !important;
+    // }
+    }

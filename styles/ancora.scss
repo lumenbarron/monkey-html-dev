@@ -1,0 +1,179 @@
+@import "./global-style.scss";
+
+//Main Banner
+.container-text-ancora {
+    padding: 0 9rem !important;
+}
+
+.text-ancora{
+    padding: 0 7rem !important;
+}
+
+.btn-ancora-header{
+    @include btn-header(185px, $azul-roxellana);
+    margin-top: 3rem;
+    color: $azul-roxellana;
+}
+
+.ancora-banner {
+    margin-bottom: -22rem;
+}
+
+.container-banner-2{
+    text-align: center;
+}
+
+.banner-2 {
+    margin-top: -9rem !important;
+}
+.col-fazemos-2{
+    padding: 3rem 3rem 0 !important;
+}
+
+.midia-container-ancora {
+    @include container-background($azul-roxellana);
+    @include flexCenter();
+}
+
+.sustentavel-container-ancora {
+    margin-top: 10.5rem !important;
+    background: url('../images/back-green.png');
+    border-radius: 32px;
+    padding: 4rem 18rem;
+    @include flexCenter();
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-sustentavel{
+    font-size: 1.25rem;
+    color: $branco-uacari;
+}
+
+.btn-fazemos{
+    @include btn-medium-white(360px);
+    margin-top: 3rem !important;
+    a{
+        text-decoration: none;
+    }
+}
+
+.container-vantagens {
+    margin-top: 13rem;
+}
+
+.row-icons-anc {
+    padding: 0 8rem 4rem !important;
+}
+.text-info-anc{
+    @include main-text($off-black, 1.5rem);
+}
+
+.container-dynamic{
+    margin-top: 10rem !important;
+}
+
+.dynamic-col{
+    @include flexDirection(column);
+    padding-left: 1.5rem !important;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+}
+
+.btn-dynamic{
+    @include btn-medium-full(48px);
+    width: 288px;
+    a{
+        text-decoration: none;
+        color:$branco-uacari;
+    }
+}
+
+.container-historias{
+    margin-bottom: 9rem;
+}
+
+@media only screen and (max-width: 1200px){
+    .container-text-ancora{
+        padding: 0 !important;
+    }
+    .text-ancora{
+        padding: 0 !important;
+    }
+    .banner-2 {
+        margin-top: 0 !important;
+        width: 100%;
+    }
+    .col-fazemos-2{
+        padding: 0 !important;
+    }
+    .midia-container-ancora {
+        margin-top: 3rem !important;
+        padding: 3rem;
+    }
+    .container-vantagens {
+        margin-top: 8rem;
+    }
+    .row-icons-anc {
+        padding: 0 !important;
+    }
+    .sustentavel-container-ancora{
+        margin-top: 3rem !important;
+        padding: 3rem;
+        width: 100%;   
+    }
+}
+
+@media only screen and (max-width: 769px){
+    // .container-text-ancora{
+    //     padding: 0 !important;
+    // }
+
+    // .text-ancora{
+    //     padding: 0 !important;
+    // }
+    .btn-ancora-header{
+        margin-top: 2rem;
+    }
+    .ancora-banner {
+        margin-bottom: -12rem;
+    }
+    // .container-vantagens {
+    //     margin-top: 8rem;
+    // }
+    // .row-icons-anc {
+    //     padding: 0 !important;
+    // }
+    .container-historias{
+        margin-bottom: 2rem;
+    }
+      .col-fazemos-2{
+        padding: 0 !important;
+    }
+    // .banner-2 {
+    //     margin-top: 0 !important;
+    //     width: 100%;
+    // }
+    // .midia-container-ancora {
+    //     margin-top: 3rem !important;
+    //     padding: 3rem;
+    // }
+    // .sustentavel-container-ancora{
+    //     margin-top: 3rem !important;
+    //     padding: 3rem;
+    //     width: 100%;   
+    // }
+    .container-dynamic{
+        margin-top: 5rem !important;
+    }
+    }
+
+    @media only screen and (max-width: 426px){
+        .container-vantagens {
+            margin-top: 5rem;
+        }
+        .text-info-anc{
+            @include main-text($off-black, 1.25rem);
+        }
+    }
